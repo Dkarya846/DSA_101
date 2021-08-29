@@ -8,6 +8,7 @@ public class Factorial {
         System.out.print("Enter a number: ");
         int a = input.nextInt();
         System.out.println("Factorial of "+a+" is "+factorial(a));
+        input.close();
     }
 
     public static BigInteger factorial(int n){

@@ -1,0 +1,6 @@
+This is a file created in Java.
+The Quick brown fox jumps the lazy dog.
+The Quick brown fox jumps the lazy dog.
+The Quick brown fox jumps the lazy dog.
+The Quick brown fox jumps the lazy dog.
+The Quick brown fox jumps the lazy dog.

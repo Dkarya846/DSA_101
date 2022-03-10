@@ -1,2 +1,2 @@
 # DSA_101
-This repository contains DSA programs in Java
+This repository contains DSA programs written in Java

@@ -8,6 +8,12 @@ public class Program {
 
         System.out.print("Enter value to b: ");
         int b = input.nextInt();
+        
+        int gcd = gcdBruteForce(a, b);
+        System.out.println("GCD of "+a+" and "+b+" is "+ gcd );
+    }
+    
+    static int gcdBruteForce(int a, int b){
         int min = a < b ? a: b;
         int gcd = 0;
         for(int i = 1; i <= min; i++){
@@ -15,6 +21,14 @@ public class Program {
                 gcd = i; 
         }
 
-        System.out.println("GCD of "+a+" and "+b+" is "+gcd );
+        return gcd;
+    }
+
+    static int gcd(int a, int b){
+        if(b == 0){
+            return a;
+        }
+
+        return gcd(b, a % b);
     }
 }

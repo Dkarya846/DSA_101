@@ -7,9 +7,28 @@ public class Program {
         int num = input.nextInt();
         input.close();
 
+        System.out.printf("Prime Factors of %d are: \n", num);
+        printPrimeFactors(num);
+        System.out.println();
+        primeNums(num);
+    }
+
+    public static void printPrimeFactors(int num){
+        for(int i = 2; i*i <= num; i++){
+            while(num % i == 0){
+                System.out.print(i + " ");
+                num /= i;
+            }
+        }
+        if(num > 1)
+            System.out.print(num);
+
+    }
+
+
+    public static void printPrimeFactorsBF(int num){
         int i = 2;
         int tempNum = num;
-        System.out.printf("Prime Factors of %d are: \n", num);
         while(tempNum > 1){
             if(isPrime(i) && tempNum % i ==0){
                 System.out.print(i + " ");
@@ -18,7 +37,6 @@ public class Program {
             else
                 i += 1;
         }
-        System.out.println();
     }
 
     public static int getFirstDigit(int num){
@@ -44,6 +62,15 @@ public class Program {
             }
         }
         return true;
+    }
+    
+    static void  primeNums(int n){
+        for(int i = 0; i <= n; i++){
+            if(isPrime(i)){
+                System.out.print(i + " ");
+            }
+        }
+        System.out.println();
     }
     
 }
